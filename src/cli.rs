@@ -65,7 +65,7 @@ impl Interface for Session {
                         let login_data = Data::Login((password, true));
                         self.sender.send(login_data).ok();
                     }
-                    Err(e) => {
+                    Err(e) => { 
                         log::error!("reinput password failed, {:?}", e);
                     }
                 }
